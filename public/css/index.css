@@ -10,35 +10,31 @@
 	--color-gray-50: #C0C0C0;
 	--color-gray-90: #333;
 
-	--background-color: #fff;
+	--background-color: radial-gradient(circle,rgba(176, 67, 67, 1) 72%, rgba(255, 255, 255, 1) 74%, rgba(50, 125, 22, 1) 79%);
 
-	--text-color: var(--color-gray-90);
-	--text-color-link: #082840;
-	--text-color-link-active: #5f2b48;
-	--text-color-link-visited: #17050F;
+	--text-color: #F4D6CC;
+	--text-color-a:rgb(138, 219, 154);
+	--text-color-link: var(--text-color-a);
+	--text-color-link-active: var(--text-color-a);
+	--text-color-link-visited: var(--text-color-a);
 
 	--syntax-tab-size: 2;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--color-gray-20: #e0e0e0;
-		--color-gray-50: #C0C0C0;
-		--color-gray-90: #dad8d8;
-
-		/* --text-color is assigned to --color-gray-_ above */
-		--text-color-link: #1493fb;
-		--text-color-link-active: #6969f7;
-		--text-color-link-visited: #a6a6f8;
-
-		--background-color: #15202b;
-	}
-}
-
+/* todo: support darkmode */
+/* maybe not though i'm kinda lazy */
 
 /* Global stylesheet */
 * {
 	box-sizing: border-box;
+}
+
+html {
+	background: var(--background-color);
+	height: 100vh;
+	/* width: 100vw; */
+	margin: 0;
+	paddihg: 0;
 }
 
 html,
@@ -47,10 +43,8 @@ body {
 	margin: 0 auto;
 	font-family: var(--font-family);
 	color: var(--text-color);
-	background-color: var(--background-color);
 }
 html {
-	overflow-y: scroll;
 }
 body {
 	max-width: 40em;
@@ -97,7 +91,7 @@ main :first-child {
 }
 
 header {
-	border-bottom: 1px dashed var(--color-gray-20);
+	border-bottom: 1px dashed var(--text-color-link);
 }
 header:after {
 	content: "";
@@ -107,7 +101,7 @@ header:after {
 
 .links-nextprev {
 	list-style: none;
-	border-top: 1px dashed var(--color-gray-20);
+	border-top: 1px dashed var(--text-color-link);
 	padding: 1em 0;
 }
 
@@ -201,7 +195,7 @@ header {
 .postlist-date,
 .postlist-item:before {
 	font-size: 0.8125em; /* 13px /16 */
-	color: var(--color-gray-90);
+	color: var(--text-color-link);
 }
 .postlist-date {
 	word-spacing: -0.5px;
@@ -262,7 +256,7 @@ a[href].header-anchor:hover {
 }
 a[href].header-anchor:focus,
 :hover > a[href].header-anchor {
-	color: #aaa;
+	color: var(--text-color-link);
 }
 
 h2 + .header-anchor {
