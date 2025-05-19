@@ -4,6 +4,8 @@ eleventyNavigation:
   key: About Me
   order: 3
 ---
-# About Me
+# about me
 
-I am a person that writes stuff.
+gurt: freezing  
+zing: im innocent  
+nocent: aye yo 😳😳
